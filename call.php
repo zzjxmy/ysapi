@@ -13,9 +13,9 @@ for ($i = 0; $i < 1; $i++) {
 		try {
 			$sTime=microtime(true);
 			$api = new apicall();
-			$api->add('pagelist','index/index/index',['page'=>1]);
-			$api->add('user','index/index/index2',['ud'=>1]);
-			$api->add('mess','index/index/index3',['id'=>1]);
+			$api->add('pagelist','index/address/getaddress',['page'=>1]);
+//			$api->add('user','index/index/index2',['ud'=>1]);
+//			$api->add('mess','index/index/index3',['id'=>1]);
 			$rs=$api->exec('www');
 			$code=$rs['code'];
 			if($code!=200){

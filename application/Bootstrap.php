@@ -20,4 +20,9 @@ class Bootstrap extends \Yaf\Bootstrap_Abstract{
 		Loader::import('helper.php');
 		Loader::import('resources.php');
 	}
+
+    public function _initPlugin(Yaf\Dispatcher $dispatcher)
+    {
+        $dispatcher->registerPlugin(new RoutePlugin ());
+    }
 }
